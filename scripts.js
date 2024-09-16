@@ -53,10 +53,44 @@ window.onload = function () {
         isDrawing = false;
     });
 
+    // To Support Mobile Devices
+    // Touch Start Event
+    canvas.addEventListener('touchstart', function (event) {
+        setMouseCoordinates(event);
+        isDrawing = true;
+
+        // Start Drawing
+        context.beginPath();
+        context.moveTo(mouseX, mouseY);
+    });
+
+    // Mouse Move Event
+    canvas.addEventListener('touchmove', function (event) {
+        setMouseCoordinates(event);
+
+        if (isDrawing) {
+            context.lineTo(mouseX, mouseY);
+            context.stroke();
+        }
+    });
+
+    // Mouse Up Event
+    canvas.addEventListener('touchend', function (event) {
+        setMouseCoordinates(event);
+        isDrawing = false;
+    });
+
     // Handle Mouse Coordinates
     function setMouseCoordinates(event) {
-        mouseX = event.clientX - boundings.left;
-        mouseY = event.clientY - boundings.top;
+        if (event.touches) {
+            if (event.touches.length > 0) {
+                mouseX = event.touches[0].clientX - boundings.left;
+                mouseY = event.touches[0].clientY - boundings.top;
+            }
+        } else {
+            mouseX = event.clientX - boundings.left;
+            mouseY = event.clientY - boundings.top;
+        }
     }
 
     // Handle Clear Button
