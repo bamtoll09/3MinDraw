@@ -1,0 +1,91 @@
+* {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    margin: 0px;
+    padding: 0px;
+    background-color: gray;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+.unit_margin {
+    flex: 1 1;
+}
+
+.main {
+    flex: 1 1;
+    flex-flow: row;
+}
+
+.contents {
+    flex: 6 6;
+    flex-flow: column;
+}
+
+.infotainment {
+    flex: 4 4;
+    flex-flow: column;
+}
+
+.min3 {
+    flex: 6 6;
+    align-items: center;
+}
+
+.sub_contents {
+    flex: 2 2;
+    flex-flow: row;
+}
+
+.min5 {
+    flex: 2 2;
+    align-items: center;
+}
+
+.min10 {
+    flex: 2 2;
+    align-items: center;
+}
+
+.multiplay {
+    flex: 2 2;
+    flex-flow: column;
+}
+
+.host {
+    flex: 1 1;
+    align-items: center;
+}
+
+.join {
+    flex: 1 1;
+    align-items: center;
+}
+
+.profile {
+    flex: 6 6;
+    align-items: center;
+}
+
+.details {
+    flex: 2 2;
+}
+
+.downloads {
+    flex: 1.3 1.3;
+    align-items: center;
+}
+
+.history {
+    flex: 1.3 1.3;
+    align-items: center;
+}
+
+.setting {
+    flex: 1.4 1.4;
+    align-items: center;
+}
