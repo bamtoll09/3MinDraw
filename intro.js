@@ -1,5 +1,7 @@
 window.onload = () => {
     generateRandomColors();
+
+    document.querySelector("style").style.display = "none";
 }
 
 var colours = ['red', 'blue', 'green', 'yellow', 'cyan', 'orange', 'aqua', 'gray', 'pink', 'purple', 'brown'];
