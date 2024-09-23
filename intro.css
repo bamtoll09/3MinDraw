@@ -14,6 +14,10 @@
     font-family: 'SDSamliphopangche_Outline';
 }
 
+style {
+    display: none;
+}
+
 title {
     display: none;
 }
