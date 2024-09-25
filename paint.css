@@ -8,11 +8,12 @@ html, body {
   overflow: hidden;
 }
 
-timer {
+.top-block {
   width: 800px;
   margin: 0 auto;
+  padding-left: 160px;
   display: flex;
-  justify-content: end;
+  justify-content: space-between;
 }
 
 main {
