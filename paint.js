@@ -1,4 +1,5 @@
 window.onload = function () {
+    var limit = parseInt(new URL(location.href).searchParams.get('limit'));
 
     // Definitions
     var canvas = document.getElementById("paint-canvas");
@@ -111,4 +112,24 @@ window.onload = function () {
         a.download = imageName || 'drawing';
         a.click();
     });
+
+
+    let timer = document.querySelector('timer');
+    limit *= 60;
+
+    let startTimer = () => {
+        if (limit <= 0)
+            finished();
+
+        timer.textContent = String(Math.floor(limit/60)).padStart(2, "0") + ":" + String(limit%60).padStart(2, "0");
+        limit--;
+    }
+
+    startTimer();
+    let timerInterval = setInterval(startTimer, 1000);
+
+    let finished = () => {
+        clearInterval(timerInterval);
+        alert("Finished!");
+    }
 };

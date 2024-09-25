@@ -8,6 +8,13 @@ html, body {
   overflow: hidden;
 }
 
+timer {
+  width: 800px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: end;
+}
+
 main {
   width: 800px;
   border: 1px solid #e0e0e0;
