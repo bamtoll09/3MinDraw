@@ -1,7 +1,9 @@
 window.onload = () => {
     generateRandomColors();
-
-    document.querySelector("style").style.display = "none";
+    
+    // Prevent showing style tag text content
+    let styleTag = document.querySelector("style");
+    if (styleTag) styleTag.style.display = "none";
 }
 
 var colours = ['red', 'blue', 'green', 'yellow', 'cyan', 'orange', 'aqua', 'gray', 'pink', 'purple', 'brown'];
